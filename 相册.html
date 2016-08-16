@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>相片</title>
+		<script src="jquery-3.1.0.min.js"></script>
+		<style>
+			main{
+				width: 550px;
+				height: 600px;
+				border: 2px solid black;
+				margin: 50px auto;
+			}
+			section{
+				width: 400px;
+				height: 350px;
+				margin: 0;
+				border: 1px solid black;
+				
+				
+			}
+			section>img{
+				width:100%;
+				height: 100%;
+				
+			}
+			main>img{
+				width: 110px;
+				height: 110px;
+				border-radius: 20px;
+				float: right;
+				margin: 5px 13px;
+				cursor: pointer;
+			}
+			main>img:nth-of-type(1){
+				margin: -350px 13px 0  0;
+				
+			}
+			main>img:nth-of-type(2){
+				margin: -235px 13px 0 0 ;
+			}
+			main>img:nth-of-type(3){
+				margin: -115px 13px 0 0 ;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<main>
+			<section>
+				<img src="images/p10.jpg" alt="" />
+			</section>
+			
+				<img src="images/p1.jpg" alt="" />
+				<img src="images/p2.jpg" alt="" />
+				<img src="images/p3.jpg" alt="" />
+				<img src="images/p4.jpg" alt="" />
+				<img src="images/p5.jpg" alt="" />
+				<img src="images/p6.jpg" alt="" />
+				<img src="images/p7.jpg" alt="" />
+				<img src="images/p8.jpg" alt="" />
+				<img src="images/p9.jpg" alt="" />
+				<img src="images/p10.jpg" alt="" />
+				<img src="images/p11.jpg" alt="" />
+			
+	</main>
+		<script type="text/javascript">
+		
+		
+		$(document).ready(function(){
+			var imgs = $('main>img')
+			var sec = $('section>img')[0]
+			
+			for (var i = 0; i < imgs.length; i++){
+				
+				
+				imgs[i].id = i + 1
+				imgs[i].onmouseenter = function(){
+					
+					
+//					alert(this.id)
+					
+					sec.src = 'images/p' + this.id + 'big.jpg'
+				}
+			}
+			
+			
+			
+		})
+			
+		</script>
+	</body>
+</html>
+
+	
